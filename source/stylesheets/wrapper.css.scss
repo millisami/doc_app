@@ -1,0 +1,17 @@
+@import "susy";
+
+$total-columns: 12;
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+
+#container {
+  @include container;
+
+  header, footer { clear: both; }
+  nav { @include span-columns(3,12); }
+
+  .content {
+    @include span-columns(9 omega,12);
+  }
+}
